@@ -40,4 +40,11 @@ class CpamaticaImage
         );
         return $attachment_id;
     }
+
+    public static function clear_url($url)
+    {
+        $re = '/http(?:s?):\/\/.+?\.(?:jpg|jpeg|png)/s';
+        preg_match_all($re, $url, $return);
+        return $return[0][0];
+    }
 }

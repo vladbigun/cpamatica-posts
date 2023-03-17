@@ -48,10 +48,7 @@ class CpamaticaPosts
 
             $post_id = wp_insert_post(  wp_slash( $post_data ) );
 
-            $re = '/http(?:s?):\/\/.+?\.(?:jpg|jpeg|png)/s';
-            preg_match_all($re, $item->image, $matches);
-            $url_img = $matches[0][0];
-
+            $url_img = CpamaticaImage::clear_url($item->image);
             $attachment_id = CpamaticaImage::upload_file_by_url($url_img);
             set_post_thumbnail( $post_id, $attachment_id );
         }
