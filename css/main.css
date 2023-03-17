@@ -1,0 +1,119 @@
+.cpamatica_posts_container{
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cpamatica_posts_container h2{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    color: #262625;
+}
+.cpamatica_post_wrapper{
+    display: flex;
+    background: #FFFFFF;
+    margin-bottom: 30px;
+    min-height: 190px;
+    box-shadow: 0px 1px 20px rgba(15, 15, 15, 0.1);
+}
+.cpamatica_post_image{
+    background: #ccc;
+    position: relative;
+    overflow: hidden;
+    min-width: 350px;
+    height: 190px;
+}
+.cpamatica_post_image img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+.cpamatica_post_content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px 15px;
+}
+.cpamatica_post_content h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+.cpamatica_post_content .post-categories a{
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ABA5C5;
+}
+.cpamatica_post_content ul.post-categories{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.cpamatica_post_content .post-categories li{
+    list-style: none;
+    margin-right: 15px;
+}
+.cpamatica_post_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cpamatica_post_read_more{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #6045CB;
+    text-decoration: none;
+}
+.cpamatica_post_rating{
+    font-weight: 500;
+    font-size: 14px;
+    float: right;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ABA5C5;
+}
+.cpamatica_post_button{
+    background: #6045CB;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: unset;
+    color: #FFFFFF;
+    float: right;
+    margin-left: 14px;
+    min-width: 120px;
+    height: 40px;
+    padding: 0 12px;
+    justify-content: center;
+}
+.cpamatica_post_button:hover{
+    text-decoration: unset;
+    background: #6a50d0;
+    color: #FFFFFF;
+}
+.cpamatica_post_bottom_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 682px) {
+    .cpamatica_post_image{
+        min-width: unset;
+    }
+    .cpamatica_post_wrapper{
+        flex-direction: column;
+    }
+}
