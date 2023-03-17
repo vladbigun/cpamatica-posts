@@ -28,9 +28,8 @@ class CpamaticaPosts
                 'order' => 'DESC'
             ];
             $author = get_users( $args )[0];
-
             $category_id = wp_create_category($item->category);
-
+            $random_date = date( 'Y-m-d H:i:s', rand(strtotime ("-10 day" , time()), time()) );
             $post_data = [
                 'post_title'    => $item->title,
                 'post_content'  => $item->content,
@@ -41,7 +40,8 @@ class CpamaticaPosts
                     'rating' => $item->rating,
                     'link' => $item->site_link,
                 ],
-                'post_author' => $author->ID
+                'post_author' => $author->ID,
+                'post_date' => $random_date,
             ];
 
             $post_id = wp_insert_post(  wp_slash( $post_data ) );
@@ -80,24 +80,6 @@ class CpamaticaPosts
 
     public static function posts_cron(){
         $data = self::get_api_posts();
-
-        $data_test[] = (object) [
-            'title' => 'efeigeij goegoeog',
-            'content' => 'test3test3test3 test3test3test3test3',
-            'image' => 'https://dummyimage.com/188x190.png',
-            'category' => 'family',
-            'rating' => '',
-            'site_link' => 'https://google.com'
-        ];
-        $data_test[] = (object) [
-            'title' => 'gmgmegmm ejgoejgjqplpl[lq efgmeg',
-            'content' => 'test3test3test35 test3test3test3test3',
-            'image' => 'https://dummyimage.com/350x190.png',
-            'category' => 'file',
-            'rating' => 4.3,
-            'site_link' => ''
-        ];
-
         if(empty($data->error)){
             self::create_posts($data);
         }

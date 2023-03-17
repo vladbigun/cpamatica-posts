@@ -5,7 +5,6 @@ class Cpamatica
     public static function init() {
         self::init_hooks();
         self::init_cron();
-       // CpamaticaPosts::posts_cron();
     }
 
     private static function init_hooks()
