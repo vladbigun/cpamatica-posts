@@ -29,7 +29,9 @@ class CpamaticaPosts
             ];
             $author = get_users( $args )[0];
             $category_id = wp_create_category($item->category);
-            $random_date = date( 'Y-m-d H:i:s', rand(strtotime ("-10 day" , time()), time()) );
+
+            $random_date = date( 'Y-m-d H:i:s', rand(strtotime ("-1 month" , time()), time()) );
+
             $post_data = [
                 'post_title'    => $item->title,
                 'post_content'  => $item->content,
