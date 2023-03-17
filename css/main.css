@@ -36,7 +36,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 15px 15px;
+    padding: 20px 15px 15px 25px;
 }
 .cpamatica_post_content h3{
     font-weight: 700;
@@ -60,11 +60,13 @@
 }
 .cpamatica_post_content .post-categories li{
     list-style: none;
+    display: block;
     margin-right: 15px;
 }
 .cpamatica_post_bottom{
     display: flex;
     align-items: center;
+    min-height: 40px;
     justify-content: space-between;
 }
 .cpamatica_post_read_more{
